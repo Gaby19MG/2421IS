@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
+<head>
         <meta charset="UTF-8">
         <title>Lista de Compras</title>
         <meta name="viewpoint" content="width=device-width, user-scalable=no, initial-scale=1.0, maximus-scale=1.0, minimum-scale=1.0">
@@ -8,9 +8,6 @@
                 href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
                 integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
                 crossorigin="anonymous">
-        
-        <script src="Chart.js"></script>
-        <script src="main.js"></script>
 
         <style>
             body{
@@ -21,18 +18,23 @@
                 justify-content: center;
             }
             .imgs{
-                width: 5cm; 
-                height: 5cm;
+                width: 4cm; 
+                height: 4cm;
             }
-        </style>
-        
+            .grafica{
+            align-items: unset;
+			height:500px;
+            width: 500px;
+			border-collapse: separate;	
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px rgba(12, 111, 211, 0.16);
+		} 
+        </style>    
 </head>
 
 <body>
-    <div class = "container">
-
+    <div>
         <div class = "row">
-
             <main id="items" class="col-sm-8 row"></main>
 
             <aside class="col-sm-4">
@@ -43,10 +45,15 @@
             </aside>
 
         </div>
-
     </div>
 
-    
-</body>
+    <div>
+        <button class="graficar">Graficar</button>
+        <canvas class="grafica" id="Grafica"></canvas>
+    </div>
 
+    <script src="Chart.js"></script>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+</body>
 </html>
